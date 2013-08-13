@@ -1,0 +1,10 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>${trademark}</ShortName>
+  <Description>${motto}</Description>
+  <Image height="16" width="16" type="image/x-icon">http://127.0.0.1:${port}/favicon.ico</Image>
+  <Url type="text/html" method="get" template="http://127.0.0.1:${port}/snipdex/?q={searchTerms}"/>
+  <Developer>Almer S. Tigelaar</Developer>
+  <SyndicationRight>open</SyndicationRight>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <InputEncoding>UTF-8</InputEncoding>
+</OpenSearchDescription>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <link rel="search" type="application/opensearchdescription+xml" href="snipdex.osdx" title="Snipdex" />
+  <title>${trademark}: ${motto}</title>
+  <style type="text/css">
+    .query {
+    background-color: #D5E5FF; 
+    border: 1px solid #87AADE; 
+    }
+    .button {
+    color: #FFFFFF;
+    background-color: #87AADE;
+    border: 1px outset #D5E5FF; 
+    }
+    h3 {
+    color: #3771C8;
+    font-family: arial;
+    }
+    a {
+    font-family: arial;
+    border: none;
+    color: #2C5AA0;
+    }
+  </style>
+  <script type="text/javascript" src="geolocation.js"></script>
+</head>
+<body bgcolor="white" onload="document.snipdex.query.focus(); if (location.search.indexOf('latitude') != -1) { enable_geolocation(); document.getElementById('geo').innerHTML='Disable GeoLocation'; };">
+  
+  <div align="center">
+    <p>
+      <br/>
+      <br/>
+    </p>
+
+    <img src="${logo}" width="${logo_width}" height="${logo_height}" alt="${trademark}" title="${trademark}"/>
+
+    <h3>${motto}</h3>
+    <br/>
+
+    <form action="" name="snipdex" id="snipdex">
+      <input name="q" type="text" size="50" class="query" />
+      <input type="submit" value="${button}" class="button" />
+    </form>
+  </div>
+
+  <div style="position: absolute; bottom: 15px; left: 48%;">
+    <a id="geo" href="javascript:toggle_geolocation();" onclick="javascript:this.innerHTML=get_geolocation_label();">Enable GeoLocation</a> | 
+    <a href="about.html">About</a>
+  </div>
+</body>
+</html>
+
+
+

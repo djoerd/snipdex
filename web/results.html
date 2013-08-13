@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>${trademark} - ${query}</title>
+  <style type="text/css">
+    .query {
+    background-color: #D5E5FF; 
+    border: 1px solid #87AADE; 
+    }
+    .button {
+    color: #FFFFFF;
+    background-color: #87AADE;
+    border: 1px outset #D5E5FF; 
+    }
+    h3 {
+    color: #3771C8;
+    }
+
+    p {
+    font-family: arial, sans-serif;
+    }
+    p.status {
+    font-size: 80%
+    }
+    .title {
+    }
+    .attributes {
+    color: #AFC6E9;
+    font-size: 70%;
+    }
+
+    /* Preview Images (Large / Small) */
+    a img {
+    border: 1px solid #3771C8; 
+    }
+    /* Origin Logo Image */
+    .attributes img {
+    margin: 0px 8px 0px 8px;
+    vertical-align:text-bottom;
+    }
+    .summary {
+    color: #162D50;
+    font-size: 80%;
+    }
+    .direct_links {
+    font-size: 70%;
+    }
+    a.direct_link {
+    border: none;
+    color: #2C5AA0;
+    }
+    .service_links {
+    font-size: 70%;
+    }
+    .service_link {
+    color: #214478;
+    }
+    .location {
+    color: #87AADE;
+    font-size: 70%;
+    float: left;
+    }
+
+
+    /* The largeresult div floats, although technically not necessary
+       it avoids a host of nested div issues outlined here:
+       http://www.positioniseverything.net/easyclearing.html
+       Some other floats (such as the image ones) do float inside
+       and thus can cause several floating problems.
+     */
+
+    div.largeresult {
+    padding-bottom: 12px;
+    float: left;
+/*    border: 1px solid red; */
+    }
+
+    div.largeimage {
+    float: left;
+    margin-right: 12px;
+    margin-bottom: 2px;
+/*    border: 1px solid black; */
+    }
+
+    div.mediumimage {
+    float: left;
+    margin-right: 6px;
+    margin-bottom: 4px;
+/*    border: 1px solid black; */
+    }
+
+    /* See comment on floating above */
+    div.smallresult {
+    float: left;
+    padding-bottom: 6px;
+/*    border: 1px solid black;*/
+    }
+
+    div.smallimage {
+    float: left;
+    margin-right: 6px;
+/*  border: 1px solid black;  */
+    }
+  </style>
+  <script type="text/javascript" src="geolocation.js"></script>
+</head>
+<body bgcolor="white" onload="document.snipdex.query.focus(); if (location.search.indexOf('latitude') != -1) { enable_geolocation(); document.getElementById('geo').innerHTML='Disable GeoLocation'; };"> 
+  
+  <div style="float: left; width: 285px; margin-bottom: 29px; margin-top: 15px; margin-left: 15px;">
+      <a href="index.html"><img src="${logo}" style="vertical-align:top; border: none;" width="242" height="90" alt="${trademark}"/></a>
+      <br />
+      <br />
+      <a id="geo" href="javascript:toggle_geolocation();" onclick="javascript:this.innerHTML=get_geolocation_label();">Enable GeoLocation</a>
+  </div>
+
+  <div style="float: left; width: 600px; margin-top: 15px;">
+    <!-- Search Form -->
+    <form action="" name="snipdex" id="snipdex">
+      <input name="q" type="text" size="62" class="query" value="${query}" />
+      <input type="submit" value="${button}" class="button" />
+    </form>
+
+    ${content}
+
+  </div>
+</body>
+</html>
+
+
